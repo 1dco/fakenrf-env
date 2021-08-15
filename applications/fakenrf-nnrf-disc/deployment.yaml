@@ -13,9 +13,9 @@ spec:
         app: fakenrf-nnrf-disc
     spec:
       containers:
-      - image: <registry>/<user>/fakenrf-nnrf-disc:<version>
+      - image: ghcr.io/1dco/fakenrf-nnrf-disc:v0.1
         name: fakenrf-nnrf-disc
         ports:
-        - containerPort: 5000 
+        - containerPort: 5000
       imagePullSecrets:
       - name: fakenrf-env-key
