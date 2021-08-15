@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: fakenrf-nnrf-nfm
+  namespace: default
+spec:
+  interval: 5m0s
+  path: ./applications/fakenrf-nnrf-nfm
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: applications
+  validation: client
