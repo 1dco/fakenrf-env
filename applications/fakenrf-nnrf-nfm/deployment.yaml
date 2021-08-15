@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fakenrf-nnrf-nfm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fakenrf-nnrf-nfm
+  template:
+    metadata:
+      labels:
+        app: fakenrf-nnrf-nfm
+    spec:
+      containers:
+      - image: <registry>/<user>/fakenrf-nnrf-nfm:<version>
+        name: fakenrf-nnrf-nfm
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: fakenrf-env-key

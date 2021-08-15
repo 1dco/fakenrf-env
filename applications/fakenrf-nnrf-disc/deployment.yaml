@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fakenrf-nnrf-disc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fakenrf-nnrf-disc
+  template:
+    metadata:
+      labels:
+        app: fakenrf-nnrf-disc
+    spec:
+      containers:
+      - image: <registry>/<user>/fakenrf-nnrf-disc:<version>
+        name: fakenrf-nnrf-disc
+        ports:
+        - containerPort: 5000 
+      imagePullSecrets:
+      - name: fakenrf-env-key
