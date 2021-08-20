@@ -13,7 +13,7 @@ spec:
         app: fakenrf-nnrf-nfm
     spec:
       containers:
-      - image: ghcr.io/1dco/fakenrf-nnrf-nfm:v0.1
+      - image: ghcr.io/1dco/fakenrf-nnrf-nfm:v0.2
         name: fakenrf-nnrf-nfm
         ports:
         - containerPort: 8080
