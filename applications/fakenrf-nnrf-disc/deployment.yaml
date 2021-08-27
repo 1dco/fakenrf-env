@@ -13,7 +13,7 @@ spec:
         app: fakenrf-nnrf-disc
     spec:
       containers:
-      - image: ghcr.io/1dco/fakenrf-nnrf-disc:v0.1
+      - image: ghcr.io/1dco/fakenrf-nnrf-disc:v0.2
         name: fakenrf-nnrf-disc
         ports:
         - containerPort: 5000
